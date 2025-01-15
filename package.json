@@ -21,10 +21,10 @@
     "node": ">= 18.0.0"
   },
   "scripts": {
-    "install": "prebuild-install || node-gyp rebuild",
+    "install": "node-gyp rebuild || prebuild-install",
     "apply-patches": "patch-package",
-    "prebuild-all": "prebuild --all --force --strip --verbose --openssl_fips=X",
-    "prebuild": "prebuild",
+    "prebuild-all": "node-gyp rebuild || prebuild --all --force --strip --verbose --openssl_fips=X",
+    "prebuild": "node-gyp rebuild || prebuild",
     "rebuild": "node-gyp rebuild"
   },
   "binary": {
@@ -43,7 +43,7 @@
   "devDependencies": {
     "node-gyp": "^11.0.0",
     "prebuild": "^13.0.1",
-    "node-abi": "^3.72.0",
+    "node-abi": "^3.71.0",
     "patch-package": "^8.0.0"
   },
   "dependencies": {
