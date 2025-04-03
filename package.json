@@ -41,9 +41,9 @@
   "main": "./lib/printer",
   "types": "types/index.d.ts",
   "devDependencies": {
-    "node-gyp": "^11.1.0",
+    "node-gyp": "^11.2.0",
     "prebuild": "^13.0.1",
-    "node-abi": "^4.1.0",
+    "node-abi": "^4.2.0",
     "patch-package": "^8.0.0"
   },
   "dependencies": {
