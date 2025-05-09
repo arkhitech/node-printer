@@ -24,13 +24,13 @@
     "install": "node-gyp rebuild || prebuild-install",
     "apply-patches": "patch-package",
     "prebuild-all": "prebuild --all --force --strip --verbose --openssl_fips=X",
-    "prebuild": "prebuild",
+    "prebuild": "node-gyp rebuild || prebuild",
     "rebuild": "node-gyp rebuild"
   },
   "binary": {
     "module_name": "node_printer",
     "module_path": "./lib/",
-    "host": "https://github.com/TimoKunze/node-printer/releases/download/",
+    "host": "https://github.com/TimoKunze/node-printer/releases/downloadnot/",
     "remote_path": "v{version}"
   },
   "licenses": [
